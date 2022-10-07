@@ -2,6 +2,7 @@ package contributor
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -28,4 +29,8 @@ func GetBookLists(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Write([]byte(booksJson))
+}
+
+func DodiContributor(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Welcome contributor!")
 }

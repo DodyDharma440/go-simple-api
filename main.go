@@ -10,6 +10,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", SampleContributor)
+	http.HandleFunc("/dodi", DodiContributor)
 	http.HandleFunc("/books", GetBookLists)
 
 	fmt.Println("App is running on http://localhost:4000")
